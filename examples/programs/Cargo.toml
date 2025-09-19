@@ -1,0 +1,55 @@
+[package]
+name = "programs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+# System Program Instructions
+advance_nonce_account = []
+allocate = []
+allocate_with_seed = []
+assign = []
+assign_with_seed = []
+authorize_nonce_account = []
+create_account = []
+create_account_with_seed = []
+initialize_nonce_account = []
+transfer_lamports = []
+transfer_with_seed = []
+update_nonce_account = []
+withdraw_nonce_account = []
+
+# SPL Token Instructions
+approve = []
+approve_checked = []
+burn = []
+burn_checked = []
+close_account = []
+freeze_account = []
+initialize_account = []
+mint_to = []
+mint_to_checked = []
+revoke = []
+set_authority = []
+sync_native = []
+thaw_account = []
+transfer_tokens = []
+transfer_checked = []
+
+[dependencies]
+pinocchio = { workspace = true }
+pinocchio-pubkey = { workspace = true }
+pinocchio-system = { workspace = true }
+pinocchio-token = { workspace = true }
+five8_const = { workspace = true }
+spl-token = { workspace = true }
+
+[dev-dependencies]
+solana-sdk = { workspace = true }
+solana-program = { workspace = true }
+mollusk-svm = { workspace = true }
+mollusk-token = { workspace = true }
+spl-token = { workspace = true }
